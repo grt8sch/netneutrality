@@ -1,0 +1,118 @@
+*{
+  font-family: arial;
+}
+:root{
+  --nav-color: rgba(40,40,40,0.9);
+  --text-color: white;
+  --text-hover-color: rgb(200,200,200);
+  --bg-hover-color: rgba(55,55,55,0.9);
+}
+html,body{
+  padding:0;
+  margin:0;
+}
+main{
+
+}
+h1,h2,h3,h4,h5,h6{
+  font-weight: normal;
+}
+#mainimage{
+  background-image: url("psafromajitpai2.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+}
+#mainimage::after{
+  content:"";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(-nav-color);
+}
+#mainimagecaption{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* #title img{ */
+  /* width: 100%; */
+  /* margin: 0 auto; */
+  /* display: block; */
+  /* visibility: hidden; */
+/* } */
+header{
+  background-color: var(--nav-color);
+  color: white;
+  padding: 0;
+  display: inline-block;
+  position: fixed;
+  width: 100%;
+  z-index:9999;
+}
+header > h1{
+  text-align: center;
+  font-weight: normal;
+  font-size: 50px;
+  margin: 5px;
+}
+#navfiller{
+  background-color: var(--nav-color);
+}
+#navbutton{
+  float:left;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+#navbutton i{
+  font-size:40px;
+  top: 12px;
+  position: absolute;
+  color: white;
+  transition: color 0.25s;
+}
+#navbutton:hover i{
+  color: var(--text-hover-color);
+}
+nav{
+  width:200px;
+  background-color: var(--nav-color);
+  left: -200px;
+  position: fixed;
+  height: 100%;
+  transition: left 0.25s;
+  z-index: 9999;
+}
+nav.show{
+  left: 0px;
+}
+nav a{
+  display: block;
+  color: var(--text-color);
+  font-size: 18px;
+  cursor: pointer;
+  padding: 12px;
+  text-decoration: none;
+  transition: background 0.25s;
+}
+nav a:hover{
+  background-color: var(--bg-hover-color);
+}
+article,section{
+  padding: 16px;
+}
+.imgfill{
+  padding:0;
+}
+p{
+  font-size: 18px;
+}
+iframe{
+  border: 2px solid rgb(200,200,200);
+  /* border-radius: 10px; */
+}
